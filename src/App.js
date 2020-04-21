@@ -1,24 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-
+import Navigation from "./components/navbar";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Portfolio from './components/portfolio';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navigation />
+      <img className="bgimg" src="https://images.unsplash.com/photo-1500964757637-c85e8a162699?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=full" alt="landscape"></img>
+      
+      {/* will create data object to inject data into 1 single call of portfolio */}
+      <div className="card-container">
+      <Portfolio />
+      <Portfolio />
+      <Portfolio />
+      <Portfolio />
+      <Portfolio />
+      </div>
     </div>
   );
 }
