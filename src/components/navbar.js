@@ -1,20 +1,20 @@
 import React from 'react';
-import {Nav} from "react-bootstrap";
+import {Navbar, Nav} from "react-bootstrap";
 
 const Navigation = () => {
     return (
         <React.Fragment>
-             <Nav className="justify-content-center" activeKey="/home">
-                <Nav.Item>
-                    <Nav.Link href="/">Home</Nav.Link>
+             <Navbar sticky="top" className="justify-content-center navbar" activeKey="/home">
+                <Nav.Item className="navItem">
+                    <Nav.Link href="/" className="navLink">Home</Nav.Link>
                 </Nav.Item>
-                <Nav.Item>
-                    <Nav.Link href="/about">About</Nav.Link>
+                <Nav.Item className="navItem">
+                    <Nav.Link href="/about" className="navLink">About</Nav.Link>
                 </Nav.Item>
-                <Nav.Item>
-                    <Nav.Link href="/portfolio">Portfolio</Nav.Link>
+                <Nav.Item className="navItem">
+                    <Nav.Link href="/portfolio" className="navLink">Portfolio</Nav.Link>
                 </Nav.Item>
-            </Nav>
+            </Navbar>
         </React.Fragment>
      );
 }

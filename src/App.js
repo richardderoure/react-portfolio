@@ -2,10 +2,10 @@ import React from 'react';
 import './App.css';
 import Navigation from "./components/navbar";
 import {BrowserRouter, Switch, Route} from "react-router-dom"
-import 'bootstrap/dist/css/bootstrap.min.css';
 import Portfolio from './components/portfolio';
 import About from "./components/about"
 import Home from "./components/home"
+import Footer from "./components/footer"
 
 function App() {
   return (
@@ -18,15 +18,10 @@ function App() {
           <Route path="/portfolio" component={Portfolio} />
         </Switch>
       </BrowserRouter>
+      <Footer />
+
       
-      {/* will create data object to inject data into 1 single call of portfolio */}
-      <div className="card-container">
-      <Portfolio />
-      <Portfolio />
-      <Portfolio />
-      <Portfolio />
-      <Portfolio />
-      </div>
+  
     </div>
   );
 }
