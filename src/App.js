@@ -1,13 +1,23 @@
 import React from 'react';
 import './App.css';
 import Navigation from "./components/navbar";
+import {BrowserRouter, Switch, Route} from "react-router-dom"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Portfolio from './components/portfolio';
+import About from "./components/about"
+import Home from "./components/home"
+
 function App() {
   return (
     <div className="App">
       <Navigation />
-      <img className="bgimg" src="https://images.unsplash.com/photo-1500964757637-c85e8a162699?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=full" alt="landscape"></img>
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/about" component={About} />
+          <Route path="/portfolio" component={Portfolio} />
+        </Switch>
+      </BrowserRouter>
       
       {/* will create data object to inject data into 1 single call of portfolio */}
       <div className="card-container">
